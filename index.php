@@ -11,9 +11,12 @@
     $title = 'Welcome php';
     $testo = 'Creare una variabile con un paragrafo di testo a vostra scelta (possibilmente corposo). Stampare a schermo il paragrafo e la sua lunghezza. Una parola da censurare viene passata dall\'utente tramite parametro GET.';
     $badWord = '***';
+    if ($_GET['word'] == 'una') {
+        'word'== $badWord;
+    }
 ?>
     <h1><?php $title ?></h1>
     <p><?php echo $testo . " lughezza= " . strlen($testo) ?></p>
-    <h2> <? echo $_GET['badWord'] ?></h2>
+    <h2> Parola inserita con GET = <? echo $_GET['word'] ?></h2>
 </body>
 </html>
