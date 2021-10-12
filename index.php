@@ -12,10 +12,11 @@
     $testo = 'Creare una variabile con un paragrafo di testo a vostra scelta (possibilmente corposo). Stampare a schermo il paragrafo e la sua lunghezza. Una parola da censurare viene passata dall\'utente tramite parametro GET.';
     $replace = '***';
     $search = ['una', 'con', 'un', 'di', 'a'];
+    $newTesto = str_replace($search, $replace, $testo);
 ?>
     <h1><?php $title ?></h1>
     <p><?php echo $testo . " lughezza= " . strlen($testo) ?></p>
     <h2> Parola inserita con GET = <? echo $_GET['word'] ?></h2>
-    <p><?php str_replace($search, $replace, $testo) ?></p>
+    <p><?php echo $newTesto ?></p>
 </body>
 </html>
